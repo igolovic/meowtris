@@ -1,0 +1,75 @@
+﻿<Window x:Class="Meowtris.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meowtris"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="250" Name="mainWindow" KeyDown="Window_KeyDown" Loaded="MainWindow_Loaded">
+
+    <Window.Resources>
+        <Canvas x:Key="background" Name="svg9441" Width="75.999978" Height="89.999956">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Canvas.RenderTransform>
+            <Canvas.Resources/>
+            <!--Unknown tag: sodipodi:namedview-->
+            <!--Unknown tag: metadata-->
+            <Canvas Name="layer1">
+                <Canvas.RenderTransform>
+                    <TranslateTransform X="-270.5714" Y="-624.50508"/>
+                </Canvas.RenderTransform>
+                <Canvas Name="g8842">
+                    <Canvas.RenderTransform>
+                        <TranslateTransform X="-2495.0614" Y="2245.4462"/>
+                    </Canvas.RenderTransform>
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path5432048360" Fill="#FF000000" StrokeThickness="6" StrokeMiterLimit="4" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="1">
+                        <Path.Data>
+                            <PathGeometry Figures="m 2775.1054 -1620.9401 a 2.4184941 3.0497158 0 0 0 -2.4727 3.0468 l 0 24.7282 a 27.999641 24.99965 0 0 0 -2 9.2244 27.999641 24.99965 0 0 0 2.6367 10.5253 c -1.0536 0.3193 -2.1234 0.7454 -3.1191 1.2012 -2.4869 1.1385 -4.5175 2.4276 -4.5175 2.4276 l 0.5332 0.8437 c 0 0 1.9852 -1.2558 4.4003 -2.3612 1.0255 -0.4694 2.1238 -0.9006 3.1699 -1.2051 a 27.999641 24.99965 0 0 0 1.2207 1.8985 c -1.2692 0.3231 -2.5934 0.843 -3.8066 1.3983 -2.4869 1.1384 -4.5175 2.4258 -4.5175 2.4258 l 0.5332 0.8437 c 0 0 1.9852 -1.2538 4.4003 -2.3593 1.2076 -0.5528 2.5209 -1.0657 3.7246 -1.3633 0.1167 -0.029 0.2256 -0.046 0.3399 -0.07 a 27.999641 24.99965 0 0 0 1.6015 1.8769 c -0.3862 0.053 -0.7778 0.1234 -1.1797 0.2227 -1.298 0.3208 -2.6588 0.8546 -3.9023 1.4238 -2.487 1.1384 -4.5175 2.4258 -4.5175 2.4258 l 0.5332 0.8436 c 0 0 1.9851 -1.2538 4.4003 -2.3592 1.2076 -0.5528 2.5209 -1.0657 3.7246 -1.3633 0.6742 -0.1667 1.304 -0.2508 1.8632 -0.2578 a 27.999641 24.99965 0 0 0 1.5547 1.3652 20.999731 19.99972 0 0 0 -2.0762 8.6171 20.999731 19.99972 0 0 0 9.1405 16.5056 5.8964506 8.0764604 78.403585 0 0 -1.9725 5.4433 5.8964506 8.0764604 78.403585 0 0 9.4666 3.7245 5.8964506 8.0764604 78.403585 0 0 4.3633 -2.3086 8.0764604 5.8964506 11.596415 0 0 4.3651 2.3086 8.0764604 5.8964506 11.596415 0 0 9.4667 -3.7225 8.0764604 5.8964506 11.596415 0 0 -1.9883 -5.461 20.999731 19.99972 0 0 0 5.4824 -5.1893 c 1.7152 0.8026 3.3872 2.1509 5.0898 3.5097 4.218 3.3667 9.8227 4.292 14.115 1.6835 4.2924 -2.6083 6.5251 -7.9167 6.4706 -14.4724 a 3.9998274 4.0003441 0 0 0 -4.0936 -4.0214 3.9998274 4.0003441 0 0 0 -3.9063 4.0897 c 0.039 4.7525 -1.4906 6.8789 -2.6249 7.5683 -1.1346 0.6894 -2.6216 0.7753 -4.9707 -1.0996 -1.5597 -1.2449 -3.7795 -3.2029 -6.828 -4.5741 a 20.999731 19.99972 0 0 0 0.4238 -3.9843 20.999731 19.99972 0 0 0 -2.0703 -8.6132 27.999641 24.99965 0 0 0 1.5313 -1.3691 c 0.563 0.01 1.1981 0.09 1.8789 0.2578 1.2036 0.2976 2.517 0.8105 3.7245 1.3633 2.4152 1.1054 4.4004 2.3592 4.4004 2.3592 l 0.5351 -0.8436 c 0 0 -2.0325 -1.2874 -4.5195 -2.4258 -1.2434 -0.5692 -2.6023 -1.103 -3.9003 -1.4238 -0.3909 -0.097 -0.7737 -0.1655 -1.1504 -0.2188 a 27.999641 24.99965 0 0 0 1.5977 -1.875 c 0.1052 0.023 0.2052 0.038 0.3125 0.064 1.2036 0.2976 2.5169 0.8105 3.7245 1.3633 2.4152 1.1055 4.4004 2.3593 4.4004 2.3593 l 0.5351 -0.8437 c 0 0 -2.0325 -1.2874 -4.5195 -2.4258 -1.2206 -0.5587 -2.5518 -1.0816 -3.828 -1.4042 a 27.999641 24.99965 0 0 0 1.2226 -1.8984 c 1.0519 0.3046 2.1574 0.7386 3.1894 1.2109 2.4152 1.1054 4.4004 2.3612 4.4004 2.3612 l 0.5351 -0.8437 c 0 0 -2.0325 -1.2891 -4.5195 -2.4276 -0.9963 -0.4561 -2.0654 -0.8819 -3.1191 -1.2012 a 27.999641 24.99965 0 0 0 2.6386 -10.5253 27.999641 24.99965 0 0 0 -2 -9.2518 l 0 -24.7008 a 2.4184941 3.0497158 0 0 0 -2.4745 -3.0468 2.4184941 3.0497158 0 0 0 -1.1523 0.4062 l -16.6561 12.1268 a 27.999641 24.99965 0 0 0 -5.7167 -0.5332 27.999641 24.99965 0 0 0 -5.6933 0.5508 l -16.6814 -12.1444 a 2.4184941 3.0497158 0 0 0 -1.1523 -0.4062 z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path540285424061" Fill="#FFCE8882" StrokeThickness="17.59705734" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="1">
+                        <Path.Data>
+                            <PathGeometry Figures="m 2775.632 -1614.9425 0 16.7539 a 28 25 0 0 1 5.6817 -5.3926 l -5.6817 -11.3613 z m 46 0 -5.6914 11.3828 a 28 25 0 0 1 5.6914 5.4082 l 0 -16.791 z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                    <Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="2795.6" Width="6" Canvas.Top="-1572.9" Height="4" Name="path54202511377" Fill="#FF4D4D4D" StrokeThickness="1" StrokeMiterLimit="4" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="1"/>
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path543656547899" Fill="#FFFFEEAA" StrokeThickness="1.73842978" StrokeMiterLimit="4" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="1">
+                        <Path.Data>
+                            <PathGeometry Figures="m 2784.2363 -1586.9395 c -2.9708 0.056 -5.7473 1.2731 -7.4258 3.4649 a 0.86930181 0.86930181 0 0 0 -0.1738 0.6172 c 0.3655 3.5942 3.394 6.586 7.3887 7.5762 4.0005 0.9845 8.1899 -0.2049 10.4277 -3.127 a 0.86930181 0.86930181 0 0 0 0.1739 -0.6172 c -0.3654 -3.594 -3.3923 -6.5857 -7.3868 -7.5762 -1.0001 -0.2462 -2.0116 -0.3566 -3.0019 -0.3379 l 0 0 z m 28.7891 0 c -0.9903 -0.019 -2.0019 0.092 -3.002 0.3379 -3.9945 0.9905 -7.0213 3.9822 -7.3867 7.5762 a 0.86930181 0.86930181 0 0 0 0.1738 0.6172 c 2.2378 2.9221 6.4273 4.1115 10.4278 3.127 3.9947 -0.9902 7.0232 -3.982 7.3887 -7.5762 a 0.86930181 0.86930181 0 0 0 -0.1739 -0.6172 c -1.6785 -2.1918 -4.455 -3.4089 -7.4258 -3.4649 l 0 0 z" FillRule="nonzero"/>
+                        </Path.Data>
+                    </Path>
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path5379676785" Fill="#FF000000" StrokeThickness="1" StrokeMiterLimit="4" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Opacity="1">
+                        <Path.Data>
+                            <PathGeometry Figures="m 2788.1307 -1584.9414 a 2.4998173 3 0 0 0 -2.4998 3 2.4998173 3 0 0 0 2.4998 3 2.4998173 3 0 0 0 2.4998 -3 2.4998173 3 0 0 0 -2.4998 -3 z m 21.0004 0 a 2.4998173 3 0 0 0 -2.4998 3 2.4998173 3 0 0 0 2.4998 3 2.4998173 3 0 0 0 2.4998 -3 2.4998173 3 0 0 0 -2.4998 -3 z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Canvas>
+        </Canvas>
+    </Window.Resources>
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Bottom" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0">Score: </Label>
+            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="Bold" Name="lblScore" HorizontalAlignment="Left">0</Label>
+            <Label Grid.Row="1" Grid.Column="0" Name="lblMessage"></Label>
+            <Button Grid.Row="1" Grid.Column="1" Name="btnNewGame"  Click="BtnNewGame_Click" Focusable="False">New game</Button>
+            <Button Grid.Row="1" Grid.Column="2" Name="btnAbout" Click="BtnAbout_Click" Focusable="False">About</Button>
+        </Grid>
+        <Grid Name="tetrisGrid" MinHeight="400" MinWidth="200">
+            <Grid.Background>
+                <VisualBrush Opacity="0.5" Stretch="Fill" Visual="{StaticResource background}" />
+            </Grid.Background>
+        </Grid>
+    </DockPanel>
+</Window>
