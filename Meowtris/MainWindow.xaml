@@ -68,7 +68,7 @@
         </Grid>
         <Grid Name="tetrisGrid" MinHeight="400" MinWidth="200">
             <Grid.Background>
-                <VisualBrush Opacity="0.5" Stretch="Fill" Visual="{StaticResource background}" />
+                <VisualBrush Opacity="0.8" Stretch="Fill" Visual="{StaticResource background}" />
             </Grid.Background>
         </Grid>
     </DockPanel>

@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Media;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Shapes;
 using TetrisLibrary;
 
@@ -59,7 +57,7 @@ namespace Meowtris
             }
         }
 
-        private void Game_RefreshScore(int score)
+        private void Game_RefreshScore(int score, int countSingleRows, int countDoubleRows, int countTripleRows, int countTetrises)
         {
             try
             {
@@ -71,19 +69,20 @@ namespace Meowtris
                     lblScore.Content = totalScore += score;
 
                     int num2 = totalScore / 10;
-                    if (interval > 100 && num1 != num2)
+                    if (interval > 250 && num1 != num2)
                     {
-                        interval -= 100;
+                        interval -= 50;
                         timer.Change(0, interval);
                     }
 
-                    // And of course, play meow! :)
-                    Uri uri = new Uri(@"pack://application:,,,/Meowtris;component/Resources/meow.wav");
-                    using (var stream = Application.GetResourceStream(uri).Stream)
-                    {
-                        SoundPlayer player = new SoundPlayer(stream);
-                        player.Play();
-                    }
+                    if(countTetrises > 0)
+                        PlayCatSound(ScoreType.Tetris);
+                    else if (countTripleRows > 0)
+                        PlayCatSound(ScoreType.Triple);
+                    else if (countDoubleRows > 0)
+                        PlayCatSound(ScoreType.Double);
+                    else if (countSingleRows > 0)
+                        PlayCatSound(ScoreType.Single);
                 }
             }
             catch (Exception ex)
@@ -92,6 +91,29 @@ namespace Meowtris
             }
         }
 
+        private static void PlayCatSound(ScoreType scoreType)
+        {
+            Uri uri = null;
+            switch (scoreType)
+            {
+                case ScoreType.Single:
+                    uri = new Uri(@"pack://application:,,,/Meowtris;component/Resources/meow.wav");
+                    break;
+
+                case ScoreType.Double:
+                case ScoreType.Triple:
+                case ScoreType.Tetris:
+                    uri = new Uri(@"pack://application:,,,/Meowtris;component/Resources/pur.wav");
+                    break;
+            }
+
+            using (var stream = Application.GetResourceStream(uri).Stream)
+            {
+                SoundPlayer player = new SoundPlayer(stream);
+                player.Play();
+            }
+        }
+        
         private void Game_EndGame()
         {
             try
@@ -170,6 +192,9 @@ namespace Meowtris
             {
                 ResetGrid();
                 game.StartGame();
+                interval = 1000;
+                timer.Change(0, interval);
+                // sounds when completed, 40 rows
 
                 lblMessage.Content = string.Empty;
                 lblScore.Content = string.Empty;
@@ -192,5 +217,13 @@ namespace Meowtris
                 MessageBox.Show(ex.ToString());
             }
         }
+    }
+
+    public enum ScoreType
+    {
+        Single = 0,
+        Double = 1,
+        Triple = 2,
+        Tetris = 3
     }
 }

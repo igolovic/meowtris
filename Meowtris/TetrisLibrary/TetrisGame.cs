@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace TetrisLibrary
@@ -21,7 +19,7 @@ namespace TetrisLibrary
         public delegate void EndGameDel();
         public event EndGameDel EndGame;
 
-        public delegate void RefreshScoreDel(int score);
+        public delegate void RefreshScoreDel(int score, int countSingleRows, int countDoubleRows, int countTripleRows, int countTetrises);
         public event RefreshScoreDel RefreshScore;
             
         public void InitializeMatrix()
@@ -54,8 +52,8 @@ namespace TetrisLibrary
             else
             {
                 tetromino.MarkAsLanded();
-                int score = RemoveRowsCompletedUpdateScore();
-                RefreshScore(score);
+                int score = RemoveRowsCompletedUpdateScore(out int countSingleRows, out int countDoubleRows, out int countTripleRows, out int countTetrises);
+                RefreshScore(score, countSingleRows, countDoubleRows, countTripleRows, countTetrises);
 
                 canAddnewTetromino = tetromino.CanAddNewTetromino();
                 if (canAddnewTetromino)
@@ -88,9 +86,10 @@ namespace TetrisLibrary
             tetromino.RotateTetromino();
         }
 
-        private int RemoveRowsCompletedUpdateScore()
+        private int RemoveRowsCompletedUpdateScore(out int countSingleRows, out int countDoubleRows, out int countTripleRows, out int countTetrises)
         {
-            int countSingleRows, countDoubleRows, countTripleRows, countTetrises, score;
+            countSingleRows = countDoubleRows = countTripleRows = countTetrises = 0;
+            int score;
             List<int> completedRowsIndices = GetScoreCounts(out countSingleRows, out countDoubleRows, out countTripleRows, out countTetrises, out score);
 
             if (completedRowsIndices.Count == 0)

@@ -68,5 +68,14 @@ namespace Meowtris {
                 return ResourceManager.GetStream("meow", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream pur {
+            get {
+                return ResourceManager.GetStream("pur", resourceCulture);
+            }
+        }
     }
 }
