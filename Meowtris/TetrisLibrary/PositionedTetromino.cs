@@ -199,9 +199,10 @@ namespace TetrisLibrary
             }
         }
 
+        internal static readonly Random rnd = new Random();
+
         internal static PositionedTetromino CreateRandom()
         {
-            Random rnd = new Random();
             var type = (TetrominoType)rnd.Next(0, 7);
             switch (type)
             {

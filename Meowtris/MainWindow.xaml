@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Meowtris"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="250" Name="mainWindow" KeyDown="Window_KeyDown" Loaded="MainWindow_Loaded">
+        Title="Meowtris" Height="500" Width="250" Name="mainWindow" KeyDown="Window_KeyDown" Loaded="MainWindow_Loaded">
 
     <Window.Resources>
         <Canvas x:Key="background" Name="svg9441" Width="75.999978" Height="89.999956">
